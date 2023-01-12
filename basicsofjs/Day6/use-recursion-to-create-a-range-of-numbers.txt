@@ -1,0 +1,13 @@
+function rangeOfNumbers(startNum, endNum) {
+
+  if(startNum == endNum){
+    return [startNum];
+  }
+  else{
+    const finalArray = rangeOfNumbers(startNum,endNum-1);
+    finalArray.push(endNum);
+    return finalArray;
+  }
+
+  
+};
