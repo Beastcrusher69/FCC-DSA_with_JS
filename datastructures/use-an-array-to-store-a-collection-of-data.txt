@@ -1,0 +1,1 @@
+let yourArray=[1,"stst",true,6,9]; // Change this line
