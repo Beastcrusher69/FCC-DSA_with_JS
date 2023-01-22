@@ -1,0 +1,16 @@
+function truncateString(str, num) {
+
+
+  if(str.length<=num){
+    return str;
+  }
+  else{
+    let strSlice=str.slice(0,num);
+    let newStr=strSlice+"...";
+  return newStr;
+
+  }
+
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
