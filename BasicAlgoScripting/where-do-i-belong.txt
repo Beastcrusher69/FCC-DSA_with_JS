@@ -1,0 +1,22 @@
+function getIndexToIns(arr, num) {
+
+  for(let i=0 ;i<arr.length-1;i++){
+    for(let j=i+1 ;j<arr.length;j++){
+      if(arr[j]<arr[i]){
+        let t=arr[i];
+            arr[i]=arr[j];
+            arr[j]=t;
+      }
+    }
+  }
+
+  for(let i=0 ;i< arr.length;i++){
+    if(arr[i]>=num){
+      return i;
+    }
+  }
+
+  return arr.length;
+}
+
+getIndexToIns([40, 60], 50);
