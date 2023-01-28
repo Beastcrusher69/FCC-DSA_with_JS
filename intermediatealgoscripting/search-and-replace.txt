@@ -1,0 +1,18 @@
+function myReplace(str, before, after) {
+
+  let capRegex=/^[A-Z]/;
+  // let smallRegex=/^[a-z]/;
+
+  if(capRegex.test(before)){
+    after=after[0].toUpperCase()+after.substring(1);
+    return str.replace(before,after);
+  }
+  else{
+    after=after[0].toLowerCase()+after.substring(1);
+    return str.replace(before,after);
+
+  }
+  
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
