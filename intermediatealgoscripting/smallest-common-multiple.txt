@@ -1,0 +1,36 @@
+function smallestCommons(arr) {
+  let first;
+  let second;
+  if(arr[0]<arr[1]){
+   first=arr[0];
+   second=arr[1];
+  }
+  else{
+  first=arr[1];
+  second=arr[0];
+  }
+
+  let count=1;
+  let ans;
+
+  while(true){
+
+    ans=first*count;
+    if(ans%second==0){
+      let flag=0;
+      for(let i=first+1;i<second;i++){
+        if(ans%i!==0){
+            flag=1;
+        }
+        
+      }
+      if(flag!==1){
+          return ans;
+        }
+    }
+    count++;
+  }
+
+}
+
+smallestCommons([1,5]);
