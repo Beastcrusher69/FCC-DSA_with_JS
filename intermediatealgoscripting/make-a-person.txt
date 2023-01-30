@@ -1,0 +1,36 @@
+const Person = function(firstAndLast) {
+ 
+  let nameArr=firstAndLast.split(" ");
+
+this.getFirstName= function()
+{
+  return nameArr[0];
+}  
+
+this.getLastName= function()
+{
+  return nameArr[1];
+}  
+
+this.getFullName = function() {
+  return nameArr[0]+" "+nameArr[1];
+};
+
+this.setFirstName = function(first) {
+  return nameArr[0]=first;
+};
+
+this.setLastName = function(last) {
+  return nameArr[1]=last;
+};
+
+this.setFullName = function(firstAndLas) {
+
+  let newArr=firstAndLas.split(" ");
+
+  return nameArr=[...newArr];
+};
+};
+
+const bob = new Person('Bob Ross');
+bob.getFullName();
