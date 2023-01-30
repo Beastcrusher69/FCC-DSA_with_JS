@@ -1,0 +1,38 @@
+function palindrome(str) {
+  let regex=/[a-zA-Z0-9]/;
+
+  let splitStr=str.toLowerCase().split("");
+
+  let filterArr=splitStr.filter(item => regex.test(item));
+
+
+  let flag=0;
+  if(filterArr.length%2==0){
+    for(let i=0 ; i<(filterArr.length/2) ;i++){
+      if(filterArr[i]!==filterArr[filterArr.length-i-1]){
+        flag=1;
+      }
+    }
+     if(flag===0){
+        return true;
+      }
+      else{
+        return false;
+      }
+  }
+  else{
+    for(let i=0 ; i<(filterArr.length-1)/2 ;i++){
+      if(filterArr[i]!==filterArr[filterArr.length-i-1]){
+        flag=1;
+      }
+    }
+    if(flag===0){
+        return true;
+      }
+      else{
+        return false;
+      }
+  }
+}
+
+palindrome("eye");
