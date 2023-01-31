@@ -1,0 +1,145 @@
+  var ansArr=[];
+
+function convertToRoman(num) {
+
+
+if(num>=1000){
+  ansArr.push("M");
+  num-=1000;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=900){
+  ansArr.push("CM");
+  num-=900;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=500){
+  ansArr.push("D");
+  num-=500;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=400){
+  ansArr.push("CD");
+  num-=400;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=100){
+  ansArr.push("C");
+  num-=400;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=90){
+  ansArr.push("XC");
+  num-=90;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=50){
+  ansArr.push("D");
+  num-=50;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=40){
+  ansArr.push("XL");
+  num-=40;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=10){
+  ansArr.push("X");
+  num-=10;
+  if(num===0){
+    return ansArr.join("");
+  }
+  else{
+    convertToRoman(num);
+  }
+}
+else if(num>=9){
+  ansArr.push("IX");  
+    return ansArr.join("");
+  
+}
+else if(num>=8){
+  ansArr.push("VIII");
+    return ansArr.join("");
+
+
+}
+else if(num>=7){
+  ansArr.push("VII");
+    return ansArr.join("");
+
+}
+else if(num>=6){
+  ansArr.push("VI");
+    return ansArr.join("");
+
+}
+else if(num>=5){
+  ansArr.push("V");
+    return ansArr.join("");
+
+}
+else if(num>=4){
+  ansArr.push("IV");
+    return ansArr.join("");
+
+}
+else if(num>=3){
+  ansArr.push("III");
+    return ansArr.join("");
+
+}
+else if(num>=2){
+  ansArr.push("II");
+    return ansArr.join("");
+
+}
+else if(num>=1){
+  ansArr.push("I");
+    return ansArr.join("");
+
+}
+
+}
+
+convertToRoman(36);
