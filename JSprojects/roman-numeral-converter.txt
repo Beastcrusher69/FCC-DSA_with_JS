@@ -1,17 +1,17 @@
-  var ansArr=[];
 
 function convertToRoman(num) {
 
+  let ansArr=[];
 
+
+while(true){
 if(num>=1000){
   ansArr.push("M");
   num-=1000;
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=900){
   ansArr.push("CM");
@@ -19,9 +19,7 @@ else if(num>=900){
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=500){
   ansArr.push("D");
@@ -29,9 +27,7 @@ else if(num>=500){
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=400){
   ansArr.push("CD");
@@ -39,19 +35,15 @@ else if(num>=400){
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=100){
   ansArr.push("C");
-  num-=400;
+  num-=100;
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=90){
   ansArr.push("XC");
@@ -59,19 +51,15 @@ else if(num>=90){
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=50){
-  ansArr.push("D");
+  ansArr.push("L");
   num-=50;
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=40){
   ansArr.push("XL");
@@ -79,9 +67,7 @@ else if(num>=40){
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=10){
   ansArr.push("X");
@@ -89,9 +75,7 @@ else if(num>=10){
   if(num===0){
     return ansArr.join("");
   }
-  else{
-    convertToRoman(num);
-  }
+  
 }
 else if(num>=9){
   ansArr.push("IX");  
@@ -138,6 +122,7 @@ else if(num>=1){
   ansArr.push("I");
     return ansArr.join("");
 
+}
 }
 
 }

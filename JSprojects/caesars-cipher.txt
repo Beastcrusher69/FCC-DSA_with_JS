@@ -1,0 +1,21 @@
+function rot13(str) {
+  
+  let regex1=/[A-M]/;
+  let regex2=/[N-Z]/;
+
+  let splitStr=str.split("");
+
+  return splitStr.map(item =>
+  { 
+   if(regex1.test(item)){ 
+
+ return String.fromCharCode(item.charCodeAt(0)+13);}
+  else if(regex2.test(item)){ 
+return String.fromCharCode(item.charCodeAt(0)-13);
+  }
+  else{
+    return item;
+  }}).join("");
+}
+
+rot13("SERR CVMMN!");
